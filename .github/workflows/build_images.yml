@@ -58,5 +58,5 @@ jobs:
 
     - name: Build and push image
       run: |
-        docker build -f docker/Dockerfile -t registry.cn-hangzhou.aliyuncs.com/devinzhang91/funkey-os:lastest .
-        docker push registry.cn-hangzhou.aliyuncs.com/devinzhang91/funkey-os:lastest
+        docker build -f docker/Dockerfile -t registry.cn-hangzhou.aliyuncs.com/devinzhang91/funkey-os:latest .
+        docker push registry.cn-hangzhou.aliyuncs.com/devinzhang91/funkey-os:latest
