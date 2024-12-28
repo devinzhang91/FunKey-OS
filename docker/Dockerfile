@@ -96,6 +96,10 @@ RUN \
 	#
 	# Set file ownership
 	chown -R funkey:funkey /home/funkey
+	
+RUN \
+	cd /home/funkey/FunKey-OS \
+	make sdk all
 
 # Set user
 USER funkey
@@ -103,9 +107,9 @@ USER funkey
 # Set working directory
 WORKDIR /home/funkey/FunKey-OS
 
-CMD ["/usr/bin/make", "sdk", "all", "-C", "/home/funkey/FunKey-OS"]
-
 # Set environment
 ENV \
 	HOME=/home/funkey \
 	LC_ALL=en_US.UTF-8
+
+CMD ["echo", "FunKey-OS build environment ready"]
