@@ -103,9 +103,9 @@ USER funkey
 # Set working directory
 WORKDIR /home/funkey/FunKey-OS
 
+CMD ["/usr/bin/make", "sdk", "all", "-C", "/home/funkey/FunKey-OS"]
+
 # Set environment
 ENV \
 	HOME=/home/funkey \
 	LC_ALL=en_US.UTF-8
-
-CMD ["echo 'Hello, FunKey-OS!' && /usr/bin/make sdk all -C /home/funkey/FunKey-OS"]
