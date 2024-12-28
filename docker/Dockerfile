@@ -108,15 +108,4 @@ ENV \
 	HOME=/home/funkey \
 	LC_ALL=en_US.UTF-8
 
-# VOLUME ["/home/funkey/.buildroot-ccache", \
-# 	"/home/funkey/FunKey-OS/buildroot", \
-# 	"/home/funkey/FunKey-OS/dowload", \
-# 	"/home/funkey/FunKey-OS/images", \
-# 	"/home/funkey/FunKey-OS/Recovery/output/build", \
-# 	"/home/funkey/FunKey-OS/Recovery/output/host", \
-# 	"/home/funkey/FunKey-OS/Recovery/output/target", \
-# 	"/home/funkey/FunKey-OS/FunKey/output/host", \
-# 	"/home/funkey/FunKey-OS/FunKey/output/build", \
-# 	"/home/funkey/FunKey-OS/FunKey/output/target"]
-
-CMD ["/usr/bin/make", "sdk", "all", "-C", "/home/funkey/FunKey-OS"]
+CMD ["echo 'Hello, FunKey-OS!' && /usr/bin/make sdk all -C /home/funkey/FunKey-OS"]
