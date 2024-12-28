@@ -57,7 +57,6 @@ jobs:
         password: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
 
     - name: Build and push image
-      uses: docker/build-push-action@v4 # docker build & push
       run: |
         docker build -f docker/Dockerfile -t registry.cn-hangzhou.aliyuncs.com/devinzhang91/funkey-os:latest .
         docker push registry.cn-hangzhou.aliyuncs.com/devinzhang91/funkey-os:latest
