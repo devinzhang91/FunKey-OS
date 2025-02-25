@@ -93,7 +93,7 @@ SDK/%: SDK/output/.config
 #	@$(call MESSAGE,"Making $@ in FunKey")
 #	@$(BR) BR2_EXTERNAL=../FunKey O=../FunKey/output $@
 
-source:
+source: buildroot FunKey/output/.config Recovery/output/.config SDK/output/.config
 	@$(call MESSAGE,"Getting sources")
 	@$(BR) BR2_EXTERNAL=../SDK O=../SDK/output source
 	@$(BR) BR2_EXTERNAL=../Recovery O=../Recovery/output source
